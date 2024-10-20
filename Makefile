@@ -1,5 +1,7 @@
 lint:
 	rubocop code
 
-lint-correct:
+fix-lint:
 	rubocop code --auto-correct
+	rubocop code -A
+
