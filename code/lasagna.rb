@@ -1,20 +1,21 @@
+# frozen_string_literal: true
+
+# The Lasagna class
 class Lasagna
-  
   EXPECTED_MINUTES_IN_OVEN = 40
 
   def remaining_minutes_in_oven(actual_minutes_in_oven)
-    return EXPECTED_MINUTES_IN_OVEN - actual_minutes_in_oven
+    EXPECTED_MINUTES_IN_OVEN - actual_minutes_in_oven
   end
 
   def preparation_time_in_minutes(layers)
     num_minutes = 2
-    return layers * num_minutes
+    layers * num_minutes
   end
 
   def total_time_in_minutes(number_of_layers:, actual_minutes_in_oven:)
-    return preparation_time_in_minutes(number_of_layers) + actual_minutes_in_oven
+    preparation_time_in_minutes(number_of_layers) + actual_minutes_in_oven
   end
-
 end
 
 if __FILE__ == $0
