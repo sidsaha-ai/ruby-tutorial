@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# The Log line parser class
 class LogLineParser
   PREFIXES = ['[INFO]:', '[WARNING]:', '[ERROR]:'].freeze
 

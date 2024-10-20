@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# The attendee class.
 class Attendee
   def initialize(height)
     @height = height
@@ -16,9 +17,11 @@ class Attendee
     @pass_id = nil
   end
 
+  # rubocop:disable Naming/PredicateName
   def has_pass?
     !@pass_id.nil?
   end
+  # rubocop:enable Naming/PredicateName
 
   def fits_ride?(ride_minimum_height)
     @height >= ride_minimum_height

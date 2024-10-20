@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# The Greeter class
 class Greeter
   attr_accessor :names
 
