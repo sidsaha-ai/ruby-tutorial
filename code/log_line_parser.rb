@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class LogLineParser
-  PREFIXES = ['[INFO]:', '[WARNING]:', '[ERROR]:']
+  PREFIXES = ['[INFO]:', '[WARNING]:', '[ERROR]:'].freeze
 
   def initialize(line)
     @line = line
