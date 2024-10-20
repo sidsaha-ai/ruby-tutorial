@@ -1,6 +1,5 @@
 class LogLineParser
-
-  PREFIXES = ["[INFO]:", "[WARNING]:", "[ERROR]:"]
+  PREFIXES = ['[INFO]:', '[WARNING]:', '[ERROR]:']
 
   def initialize(line)
     @line = line
@@ -19,18 +18,17 @@ class LogLineParser
   end
 
   def reformat
-    return "#{message} (#{log_level})"
+    "#{message} (#{log_level})"
   end
-
 end
 
 if __FILE__ == $0
-  log = LogLineParser.new("[ERROR]: Invalid Operation")
+  log = LogLineParser.new('[ERROR]: Invalid Operation')
   puts "Message: #{log.message}"
   puts "Log Level: #{log.log_level}"
   puts "Reformatted: #{log.reformat}"
 
-  puts ""
+  puts ''
 
   log = LogLineParser.new("[WARNING]: Disk almost full\r\n")
   puts "Message: #{log.message}"

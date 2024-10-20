@@ -1,17 +1,10 @@
 class Attendee
-
   def initialize(height)
     @height = height
     @pass_id = nil
   end
 
-  def height
-    return @height
-  end
-
-  def pass_id
-    return @pass_id
-  end
+  attr_reader :height, :pass_id
 
   def issue_pass!(pass_id)
     @pass_id = pass_id
@@ -22,17 +15,16 @@ class Attendee
   end
 
   def has_pass?
-    return !@pass_id.nil?
+    !@pass_id.nil?
   end
 
   def fits_ride?(ride_minimum_height)
-    return @height >= ride_minimum_height
+    @height >= ride_minimum_height
   end
 
   def allowed_to_ride?(ride_minimum_height)
-    return has_pass? && fits_ride?(ride_minimum_height)
+    has_pass? && fits_ride?(ride_minimum_height)
   end
-
 end
 
 if __FILE__ == $0
